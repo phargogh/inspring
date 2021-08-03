@@ -11,7 +11,7 @@ on:
   pull_request:
 
 env:
-  IMAGE_NAME: inspring
+  IMAGE_NAME: inspring-no-gcloud-keys
 
 jobs:
   # Push image to GitHub Packages.

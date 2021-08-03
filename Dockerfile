@@ -23,9 +23,6 @@ RUN source /usr/local/gcloud-sdk/google-cloud-sdk/completion.bash.inc
 RUN source /usr/local/gcloud-sdk/google-cloud-sdk/path.bash.inc
 RUN echo "export PATH=$PATH:/usr/local/gcloud-sdk/google-cloud-sdk/bin" >> /root/.bashrc
 
-COPY /ecoshard-bucket-reader-key.json /usr/local//ecoshard-bucket-reader-key.json
-RUN /usr/local/gcloud-sdk/google-cloud-sdk/bin/gcloud auth activate-service-account --key-file=/usr/local//ecoshard-bucket-reader-key.json
-RUN rm /usr/local//ecoshard-bucket-reader-key.json
 # CRC mod for good gsutil -m cp mode
 RUN pip uninstall crcmod -y && pip install --no-cache-dir -U crcmod
 
