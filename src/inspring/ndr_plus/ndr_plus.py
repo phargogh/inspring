@@ -311,7 +311,7 @@ def add_outlets_to_channel_raster(d8_flow_dir_path, channel_raster_path):
         dir=os.path.dirname(channel_raster_path))
     outlet_vector_path = os.path.join(workspace_dir, 'outlets.gpkg')
     pygeoprocessing.routing.detect_outlets(
-        (d8_flow_dir_path, 1), outlet_vector_path)
+        (d8_flow_dir_path, 1), 'd8', outlet_vector_path)
 
     inv_gt = gdal.InvGeoTransform(channel_info['geotransform'])
     outlet_vector = gdal.OpenEx(outlet_vector_path, gdal.OF_VECTOR)
