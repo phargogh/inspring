@@ -26,7 +26,7 @@ RUN echo "export PATH=$PATH:/usr/local/gcloud-sdk/google-cloud-sdk/bin" >> /root
 # CRC mod for good gsutil -m cp mode
 RUN pip uninstall crcmod -y && pip install --no-cache-dir -U crcmod
 
-RUN git clone https://github.com/therealspring/inspring.git /usr/local/inspring
+RUN git clone https://github.com/phargogh/inspring.git /usr/local/inspring
 WORKDIR /usr/local/inspring
 RUN pip3 install -r requirements.txt
 RUN /usr/bin/python setup.py install
