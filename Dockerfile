@@ -28,7 +28,7 @@ RUN pip uninstall crcmod -y && pip install --no-cache-dir -U crcmod
 
 RUN git clone https://github.com/phargogh/inspring.git /usr/local/inspring
 WORKDIR /usr/local/inspring
-RUN git checkout bugfix/nci-ndr-plus-bugfix
+RUN git checkout bugfix/nci-ndr-plus-debugging
 RUN pip3 install -r requirements.txt
 RUN /usr/bin/python setup.py install
 
